@@ -1,0 +1,27 @@
+<%- include('layout/header') %>
+<div class="col-lg-10">
+<h1>Add State</h1>
+    <div class="dashboard-content-area">
+       <form method="post" action="/state/add/">
+
+         <div class="mb-3 mt-3 row g-3 align-items-center">
+            <div class="col-lg-2"><label class="form-label">Country</label></div>
+            <div class="col"><select name="country_id" class="form-control" aria-label="Default select example">
+               <option selected> select your country</option>
+               <% x.forEach((y) => { %>
+                  <option value="<%=y.Country %>"><%=y.Country %></option>
+              <% }) %>
+               </select></div>
+         </div> 
+
+          <div class="mb-3 mt-3 row g-3 align-items-center">
+             <div class="col-lg-2"><label class="form-label">State</label></div>
+             <div class="col"><input type="text" name="stateField" class="form-control" placeholder="State Name"></div>
+          </div>
+          <div class="mb-5 mt-3 text-center">
+             <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+       </form>
+    </div>
+ </div>
+<%- include('layout/footer') %>

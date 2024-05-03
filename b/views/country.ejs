@@ -1,0 +1,40 @@
+<%- include('layout/header') %>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+
+                <h1>All country List</h1>
+
+
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">Country</th>
+                                <th scope="col">State</th>
+                            </tr>
+                        </thead>
+                    </thead>
+                    <tbody>
+                        <%x.forEach((y) => { %>
+                          <tr>
+                            <td><%= y.Country %></td>
+                            <td><a class="btn btn-primary" href="/state">Add State</a></td>
+                          </tr>
+                        <% }); %>
+                      </tbody>
+     
+  
+                    </table>
+                    <div style="text-align: center; margin-top: 20px;">
+                        <a href="/country/add" class="btn btn-success btn-md">Add More Country</a>
+                     </div>
+      
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <%- include('layout/footer') %>
